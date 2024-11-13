@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #2b4c7e;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.highlight {
+    color: #f0c92c;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    gap: 1rem;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.bordered-section {
+    border: 2px solid #2b4c7e;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.about-me h2, .location-info h3, .resources h3 {
+    border-bottom: 2px solid #2b4c7e;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-content p {
+    width: 65%;
+}
+
+.profile-img {
+    width: 30%;
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.location-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.flag-img {
+    width: 30%;
+    max-width: 100px;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+.location-content p {
+    width: 65%;
+}
+
+.resources {
+    width: 30%;
+}
+
+.resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources ul li {
+    margin: 0.5rem 0;
+}
+
+.resources ul li a {
+    color: #2b4c7e;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #2b4c7e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
