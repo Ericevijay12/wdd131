@@ -1,0 +1,21 @@
+
+/* Styles for larger screens */
+
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu li {
+        margin: 0 1rem;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}￼Enter
