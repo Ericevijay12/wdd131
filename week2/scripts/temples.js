@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburgerButton = document.getElementById("hamburger-button");
     const menu = document.getElementById("menu");
 
+    // Toggle the menu and update aria-expanded for accessibility
     hamburgerButton.addEventListener("click", () => {
+        const isExpanded = hamburgerButton.getAttribute("aria-expanded") === "true";
+        hamburgerButton.setAttribute("aria-expanded", !isExpanded);
         menu.classList.toggle("active");
     });
-});￼Enter
+});
