@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore an album of LDS temples filtered by attributes such as size, age, and dedication year.">
+    <meta name="keywords" content="LDS Temples, Temple Album, Temple Filters, WDD 131">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <title>Week 4: Temple Album</title>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album - <span class="highlight">Eric Evijay Ohiani</span></h1>
+        <nav>
+            <button id="hamburger-button" class="hamburger-button" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <ul id="menu" class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" id="old-temples">Old Temples</a></li>
+                <li><a href="#" id="new-temples">New Temples</a></li>
+                <li><a href="#" id="large-temples">Large Temples</a></li>
+                <li><a href="#" id="small-temples">Small Temples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Collection</h2>
+        <section id="temple-cards" class="album-grid"></section>
+    </main>
+
+    <footer>
+        <p>&copy;2024 Eric Evijay Ohiani &#128151; Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
