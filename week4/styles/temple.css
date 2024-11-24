@@ -1,0 +1,99 @@
+/* Mobile-first styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2b4c7e;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: #f0c92c;
+}
+
+.nav-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 1rem 0;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.album-grid figure {
+    border: 2px solid #2b4c7e;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.album-grid figure:hover {
+    transform: scale(1.05);
+}
+
+.album-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.album-grid figcaption {
+    width: 100%;
+    font-size: 1rem;
+    color: #2b4c7e;
+    padding-top: 0.5rem;
+}
+
+footer {
+    background-color: #2b4c7e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
