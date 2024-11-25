@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
         },
         {
+            templeName: "Lima Perú",
+            location: "Lima, Perú",
+            dedicated: "1986, January 10",
+            area: 9600,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
 document.addEventListener("DOMContentLoaded", () => {
     const temples = [
         {
@@ -89,6 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
+    // Function to extract the year from the "dedicated" string
+    function getYearFromDedicated(dedicated) {
+        return parseInt(dedicated.split(",")[0], 10);
+    }
+
     // Function to render temples
     function renderTemples(filteredTemples) {
         const templeCards = document.getElementById("temple-cards");
@@ -129,12 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add filters for temples
     document.getElementById("old-temples").addEventListener("click", () => {
-        const oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+        const oldTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) < 1900);
         renderTemples(oldTemples);
     });
 
     document.getElementById("new-temples").addEventListener("click", () => {
-        const newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+        const newTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) > 2000);
         renderTemples(newTemples);
     });
 
@@ -152,12 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastModifiedElement = document.getElementById("lastModified");
     const lastModifiedDate = new Date(document.lastModified);
     lastModifiedElement.textContent = lastModifiedDate.toLocaleString();
-});            templeName: "Lima Perú",
-            location: "Lima, Perú",
-            dedicated: "1986, January 10",
-            area: 9600,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
-        },
+});        },
         {
             templeName: "Mexico City Mexico",
             location: "Mexico City, Mexico",
@@ -166,6 +171,11 @@ document.addEventListener("DOMContentLoaded", () => {
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
         }
     ];
+
+    // Function to extract the year from the "dedicated" string
+    function getYearFromDedicated(dedicated) {
+        return parseInt(dedicated.split(",")[0], 10);
+    }
 
     // Function to render temples
     function renderTemples(filteredTemples) {
