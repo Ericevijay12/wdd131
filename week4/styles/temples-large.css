@@ -1,0 +1,18 @@
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .album-grid {
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .album-grid figure {
+        width: calc(33.333% - 2rem);
+    }
+}
