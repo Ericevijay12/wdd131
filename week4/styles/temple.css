@@ -1,99 +1,88 @@
-/* Mobile-first styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
     color: #333;
-    background-color: #f4f4f4;
 }
 
+/* Header */
 header {
-    background-color: #2b4c7e;
+    background: #1a73e8;
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
+header .highlight {
+    color: #ffcc00;
 }
 
-.highlight {
-    color: #f0c92c;
-}
-
+/* Navigation Menu */
 .nav-menu {
     display: none;
     list-style: none;
     padding: 0;
-}
-
-.nav-menu li {
-    margin: 1rem 0;
-}
-
-.nav-menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hamburger-button {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+    margin: 0;
+    background: #f4f4f4;
+    text-align: center;
 }
 
 .nav-menu.active {
     display: block;
 }
 
+.nav-menu li {
+    padding: 0.5rem 0;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hamburger-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
 .album-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
-    max-width: 600px;
-    margin: 2rem auto;
     padding: 1rem;
 }
 
 .album-grid figure {
-    border: 2px solid #2b4c7e;
-    padding: 0.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.album-grid figure:hover {
-    transform: scale(1.05);
 }
 
 .album-grid img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .album-grid figcaption {
-    width: 100%;
-    font-size: 1rem;
-    color: #2b4c7e;
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
+/* Footer */
 footer {
-    background-color: #2b4c7e;
-    color: #fff;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    background: #1a73e8;
+    color: #fff;
 }
