@@ -3,17 +3,15 @@
     .nav-menu {
         display: flex;
         justify-content: center;
-    }
-
-    .nav-menu li {
-        margin: 0 1rem;
-    }
-
-    .hamburger-button {
-        display: none;
+        gap: 2rem;
     }
 
     .album-grid {
-        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 2rem;
     }
-}
+
+    .album-grid figure {
+        width: calc(33.333% - 2rem);
+    }
+}￼Enter
