@@ -3,15 +3,17 @@
     .nav-menu {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+    }
+
+    .nav-menu li {
+        margin: 0 1rem;
+    }
+
+    .hamburger-button {
+        display: none;
     }
 
     .album-grid {
-        justify-content: space-between;
-        padding: 2rem;
-    }
-
-    .album-grid figure {
-        width: calc(33.333% - 2rem);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
