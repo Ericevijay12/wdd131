@@ -72,7 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy">
                 <figcaption>
                     <h3>${temple.templeName}</h3>
-                    <p><strong>Location:</strong> ${temple.location}</p><p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                    <p><strong>Location:</strong> ${temple.location}</p>
+                    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
                     <p><strong>Area:</strong> ${temple.area} sq ft</p>
                 </figcaption>
             `;
@@ -82,44 +83,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Filtering functions
     function filterBySize() {
-        const largeTemples = temples.filter(temple => temple.area >= 10000);
+        const largeTemples = temples.filter(temple => temple.area >=50000); // Filter for temples with an area of 50,000 sq ft or more
         renderTemples(largeTemples);
     }
 
-    function filterBySmall() {
-        const smallTemples = temples.filter(temple => temple.area < 10000);
-        renderTemples(smallTemples);
-    }
-
-    function filterByOld() {
-        const oldTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) < 2000);
+    function filterByAge() {
+        const oldTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) < 2000); // Filter for temples dedicated before 2000
         renderTemples(oldTemples);
     }
 
-    function filterByNew() {
-        const newTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) >= 2000);
+    function filterByNewTemples() {
+        const newTemples = temples.filter(temple => getYearFromDedicated(temple.dedicated) >= 2000); // Filter for temples dedicated after 2000
         renderTemples(newTemples);
     }
 
-    // Adding Event Listeners for the filter buttons
-    document.getElementById("large-temples").addEventListener("click", filterBySize);
-    document.getElementById("small-temples").addEventListener("click", filterBySmall);
-    document.getElementById("old-temples").addEventListener("click", filterByOld);
-    document.getElementById("new-temples").addEventListener("click", filterByNew);
+    function filterBySmallTemples() {
+        const smallTemples = temples.filter(temple => temple.area < 20000); // Filter for temples with an area less than 20,000 sq ft
+        renderTemples(smallTemples);
+    }
 
-    // Toggle the menu for smaller screens
+    // Add event listeners for navigation links
+    document.getElementById("large-temples").addEventListener("click", filterBySize);
+    document.getElementById("old-temples").addEventListener("click", filterByAge);
+    document.getElementById("new-temples").addEventListener("click", filterByNewTemples);
+    document.getElementById("small-temples").addEventListener("click", filterBySmallTemples);
+
+    // Add a hamburger menu toggle functionality
     const hamburgerButton = document.getElementById("hamburger-button");
-    const menu = document.getElementById("menu");
+    const navMenu = document.getElementById("menu");
 
     hamburgerButton.addEventListener("click", () => {
-        const expanded = hamburgerButton.getAttribute("aria-expanded") === "true" || false;
-        hamburgerButton.setAttribute("aria-expanded", !expanded);
-        menu.classList.toggle("active");
+        const isExpanded = hamburgerButton.getAttribute("aria-expanded") === "true";
+        hamburgerButton.setAttribute("aria-expanded", !isExpanded);
+        navMenu.classList.toggle("active");
     });
 
-    // Display last modified date
+    // Display the last modified date in the footer
     document.getElementById("lastModified").textContent = document.lastModified;
 
-    // Render all temples on page load
+    // Initial render of all temples
     renderTemples(temples);
 });
