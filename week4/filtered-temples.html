@@ -19,25 +19,26 @@
     <header>
         <h1>Temple Album - <span class="highlight">Eric Evijay Ohiani</span></h1>
         <nav>
-            <button id="hamburger-button" class="hamburger-button" aria-expanded="false" aria-controls="menu">&#9776;</button>
-            <ul id="menu" class="nav-menu">
-                <li><a href="#" id="home-link">Home</a></li>
-                <li><a href="#" id="old-temples">Old Temples</a></li>
-                <li><a href="#" id="new-temples">New Temples</a></li>
-                <li><a href="#" id="large-temples">Large Temples</a></li>
-                <li><a href="#" id="small-temples">Small Temples</a></li>
+            <button id="hamburger-button" class="hamburger-button" aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu">&#9776;</button>
+            <ul id="menu" class="nav-menu" role="navigation">
+                <li><a href="#" id="home-link" role="link">Home</a></li>
+                <li><a href="#" id="old-temples" role="link">Old Temples</a></li>
+                <li><a href="#" id="new-temples" role="link">New Temples</a></li>
+                <li><a href="#" id="large-temples" role="link">Large Temples</a></li>
+                <li><a href="#" id="small-temples" role="link">Small Temples</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h2>Temple Collection</h2>
-        <section id="temple-cards" class="album-grid"></section>
+        <section id="temple-cards" class="album-grid" aria-label="Temple Cards"></section>
     </main>
 
     <footer>
         <p>&copy;2024 Eric Evijay Ohiani &#128151; Nigeria</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p><a href="#home-link" aria-label="Back to Home">Back to Home</a></p>
     </footer>
 </body>
 </html>
