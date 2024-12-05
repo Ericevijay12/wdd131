@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hidden Gems - Exploring Local Hidden Gems</title>
-    <!-- Updated link to external CSS in 'styles' folder -->
     <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 
@@ -21,24 +20,21 @@
             <li><a href="#site-purpose">Site Purpose</a></li>
             <li><a href="#scenarios">Scenarios</a></li>
             <li><a href="#gem-details">Gemstone Details</a></li>
-            <li><a href="#wireframe">Wireframe</a></li>
+            <li><a href="#gemstone">Gemstone</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Site Name Section -->
         <section id="site-name">
             <h2>Site Name</h2>
             <p><strong>Hidden Gems</strong>: The name reflects the discovery and exploration of unique, lesser-known places in the local area, such as hidden nature trails, off-the-beaten-path attractions, and small but exceptional restaurants.</p>
         </section>
 
-        <!-- Site Purpose Section -->
         <section id="site-purpose">
             <h2>Site Purpose</h2>
             <p>The purpose of this site is to introduce visitors to local hidden gems. The website will feature pages for each hidden gem, with information on location, attractions, nearby activities, and travel tips to help visitors explore these unique spots.</p>
         </section>
 
-        <!-- Scenarios Section -->
         <section id="scenarios">
             <h2>Scenarios</h2>
             <ul>
@@ -47,7 +43,6 @@
             </ul>
         </section>
 
-        <!-- Feature Hidden Gem Section -->
         <section id="gem-details">
             <h2>Feature Hidden Gem: The Secret of Waterfall Trail</h2>
             <div class="gem-card">
@@ -66,16 +61,26 @@
             </div>
         </section>
 
-        <!-- Wireframe Section -->
-        <section id="wireframe">
-            <h2 class="visually-hidden">Wireframe</h2>
-            <img src="https://i.postimg.cc/YSRGfbjC/images.jpg" alt="Wireframe Design">
+        <section id="gemstone">
+            <h2>Gemstone</h2>
+            <p>Gemstones in the context of this site represent hidden treasures—places of exceptional beauty and uniqueness that remain undiscovered by many. These locations provide unforgettable experiences for explorers and adventurers.</p>
+            <div class="round-card">
+                <img src="https://i.postimg.cc/YSRGfbjC/images.jpg" alt="Gemstone Design">
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Hidden Gems. All rights reserved.</p>
+        <p>&copy; 2024 Eric Evijay Ohiani &#128151; Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+        // Set today's date in the format: "Month Day, Year"
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('lastModified').textContent = today.toLocaleDateString('en-US', options);
+    </script>
 </body>
 
 </html>
