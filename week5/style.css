@@ -1,0 +1,105 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #8B4513, #FFD700);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-wrapper {
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+header {
+  background-color: #8B4513;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+main {
+  padding: 20px;
+}
+
+label, legend {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  background-color: #FFD700;
+  color: #8B4513;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #D4AF37;
+}
+
+footer {
+  background-color: #8B4513;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating label {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.rating .checkmark {
+  display: inline-block;
+  margin-left: 10px;
+  color: #FFD700;
+  visibility: hidden;
+}
+
+.rating input:checked + label .checkmark {
+  visibility: visible;
+}
