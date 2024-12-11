@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
   margin: 0;
@@ -102,4 +101,13 @@ footer {
 
 .rating input:checked + label .checkmark {
   visibility: visible;
+}
+
+/* Focus and hover styles for accessibility */
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 3px solid #FFD700;
+}
+
+button:active {
+  background-color: #C5A700;
 }
