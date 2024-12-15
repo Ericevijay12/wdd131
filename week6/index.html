@@ -1,0 +1,62 @@
+<!DOCT<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Gem Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Hidden Gem Explorer</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gems.html">Gems</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Exploring Local Hidden Gems</h1>
+            <p>Uncover the beauty of undiscovered gemstones in your backyard.</p>
+            <a href="#featured" class="cta">Start Exploring</a>
+        </div>
+    </section>
+
+    <section id="featured" class="featured-locations">
+        <h2>Discover Hidden Wonders</h2>
+        <div class="filter-container">
+            <label for="filter">Filter by Gem:</label>
+            <select id="filter">
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div class="card-container">
+            <!-- Cards will be dynamically loaded -->
+        </div>
+    </section>
+
+    <section id="submit" class="submit-gem">
+        <h2>Submit Your Hidden Gem</h2>
+        <form id="gem-form">
+            <label for="gem-name">Gem Name:</label>
+            <input type="text" id="gem-name" name="gem-name" required>
+            <label for="gem-image">Image URL:</label>
+            <input type="url" id="gem-image" name="gem-image" required>
+            <label for="gem-description">Gem Description:</label>
+            <textarea id="gem-description" name="gem-description" required></textarea>
+            <button type="submit">Submit Gem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eric Evijay Ohiani, Nigeria</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
