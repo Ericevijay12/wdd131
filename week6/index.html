@@ -7,62 +7,48 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="navbar">
             <div class="logo">Hidden Gem Explorer</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gems.html">Gems</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Exploring Local Hidden Gems</h1>
-            <p>Uncover the beauty of undiscovered gemstones in your backyard.</p>
-            <a href="#featured" class="cta">Start Exploring</a>
+            <p>Uncover the beauty of undiscovered gemstones and natural wonders.</p>
+            <a href="#cards" class="cta">Start Exploring</a>
         </div>
     </section>
 
-    <!-- Featured Gems -->
-    <section id="featured" class="featured-locations">
+    <section id="cards">
         <h2>Discover Hidden Wonders</h2>
-        <div class="filter-container">
-            <label for="filter">Filter by Gem:</label>
-            <select id="filter">
-                <option value="all">All</option>
+
+        <!-- Filter Dropdown -->
+        <div>
+            <label for="gem-filter">Filter by Gem: </label>
+            <select id="gem-filter">
+                <option value="All">All</option>
+                <option value="Andradite">Andradite</option>
+                <option value="Azurite">Azurite</option>
+                <option value="Aquamarine">Aquamarine</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Sapphire">Sapphire</option>
+                <option value="Emerald">Emerald</option>
             </select>
         </div>
-        <div class="card-container">
-            <!-- Cards will be dynamically loaded -->
-        </div>
+        
+        <div class="card-container"></div>
     </section>
 
-    <!-- Submit Gem Form -->
-    <section id="submit" class="submit-gem">
-        <h2>Submit Your Hidden Gem</h2>
-        <form id="gem-form">
-            <label for="gem-name">Gem Name:</label>
-            <input type="text" id="gem-name" name="gem-name" required>
-            <label for="gem-image">Image URL:</label>
-            <input type="url" id="gem-image" name="gem-image" required>
-            <label for="gem-description">Gem Description:</label>
-            <textarea id="gem-description" name="gem-description" required></textarea>
-            <button type="submit">Submit Gem</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Eric Evijay Ohiani, Nigeria</p>
+        <p>&copy; 2024 Hidden Gem Explorer. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
