@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Aquamarine Gem", image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Aquamarine_P1000141.JPG", tag: "Aquamarine" },
         { name: "Ruby Gem", image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Corundum-215330.jpg", tag: "Ruby" },
         { name: "Sapphire Gem", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/Logan_Sapphire_SI.jpg", tag: "Sapphire" },
-        { name: "Emerald Gem", image: "https://upload.wikimedia.org/wikipedia/commons/d/df/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_2.jpg", tag: "Emerald" }
+        { name: "Emerald Gem", image: "https://upload.wikimedia.org/wikipedia/commons/d/df/B%C3%A9ryl_var.%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_2.jpg", tag: "Emerald" }
     ];
 
     const filterSelect = document.getElementById("filter");
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
-        cardElement.dataset.tag = card.tag;
 
         const img = document.createElement("img");
         img.src = card.image;
@@ -26,19 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
         cardElement.appendChild(img);
         cardElement.appendChild(title);
         cardContainer.appendChild(cardElement);
-    });
-
-    cards.forEach(card => {
-        const option = document.createElement("option");
-        option.value = card.tag;
-        option.textContent = card.tag;
-        filterSelect.appendChild(option);
-    });
-
-    filterSelect.addEventListener("change", () => {
-        const value = filterSelect.value;
-        document.querySelectorAll(".card").forEach(card => {
-            card.style.display = card.dataset.tag === value || value === "all" ? "block" : "none";
-        });
     });
 });
