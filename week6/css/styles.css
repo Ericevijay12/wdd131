@@ -1,4 +1,4 @@
-/* Base Styles */
+/* B/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +9,16 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #121212;
+    background-color: #f4f4f4;
 }
 
 header {
     background: #1e1e1e;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -148,8 +152,8 @@ header {
 
 /* Gem Info Section */
 .gem-info {
-    background: #121212;
-    color: #fff;
+    background: #f4f4f4;
+    color: #333;
     padding: 3rem 2rem;
 }
 
@@ -160,15 +164,69 @@ header {
 
 .gem-description p {
     font-size: 1rem;
-    color: #ccc;
+    color: #666;
     margin-bottom: 2rem;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
-    background: #1e1e1e;
-    color: #ccc;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem 2rem;
     margin-top: 2rem;
+}
+
+.footer-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content {
+    background-color: #444;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 45%;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-content ul li a:hover {
+    color: #6c63ff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
